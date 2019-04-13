@@ -1,7 +1,7 @@
-TypeScript React "useRef" Demo
-=================================
+TypeScript React Use Context to Provide Store Demo
+==================================================
 
-使用`useRef`可以让我们使用const来持有一个可能会发生变化的`ref`，并使用`.current`拿到当前最新的element
+如何利用React的`useContext`和`useState`来为应用创建一个全局的store，类似一个简化版的redux.
 
 ```
 npm install
