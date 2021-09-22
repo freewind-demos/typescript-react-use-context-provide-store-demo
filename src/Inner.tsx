@@ -5,7 +5,7 @@ export default function Inner() {
   const store = useContext(StoreContext)
 
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
-    store.updateMessage(event.currentTarget.value);
+    store.update({message: event.currentTarget.value});
   }
 
   return <div>

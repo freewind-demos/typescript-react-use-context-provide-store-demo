@@ -5,7 +5,7 @@ export type Store = {
 }
 
 export type Actions = {
-  updateMessage: (message: string) => void
+  update: (payload: Partial<Store>) => void
 }
 
 export function createStore(defaultStore: Store) {
@@ -13,7 +13,7 @@ export function createStore(defaultStore: Store) {
 
   const [store, setStore] = useState<Store>(defaultStore)
   const actions: Actions = {
-    updateMessage: (message) => setStore({...store, message})
+    update: (payload) => setStore({...store, ...payload})
   }
 
   return {...store, ...actions}
